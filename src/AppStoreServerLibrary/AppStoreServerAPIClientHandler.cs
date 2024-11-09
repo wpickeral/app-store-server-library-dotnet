@@ -53,9 +53,10 @@ public class AppStoreServerAPIClientHandler : DelegatingHandler
             {"bid", _options.BundleId }
         };
 
-        CngKey key = CngKey.Import(Convert.FromBase64String(_options.SigningKey), CngKeyBlobFormat.Pkcs8PrivateBlob);
-
-        var token = JWT.Encode(payoad, key, JwsAlgorithm.ES256, header);
+        var keyBytes = Convert.FromBase64String(_options.SigningKey);
+        ECDsa ecdsa = ECDsa.Create();
+        ecdsa.ImportPkcs8PrivateKey(keyBytes, out _);
+        var token = JWT.Encode(payoad, ecdsa, JwsAlgorithm.ES256, header);
         return token;
     }
 }
