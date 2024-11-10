@@ -17,7 +17,7 @@ public class SendAttemptItem
     /// </para>
     /// </summary>
     [JsonPropertyName("attemptDate")]
-    public int? AttemptDate { get; set; }
+    public long? AttemptDate { get; set; }
 
     /// <summary>
     /// The success or error information the App Store server records when it attempts to send an App Store server notification to your server.

@@ -16,7 +16,8 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-app.UseHttpsRedirection();
+// Diabled to use NGROK for testing
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
