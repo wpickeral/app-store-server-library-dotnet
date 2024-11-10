@@ -43,15 +43,6 @@ public class SignedDataVerifier : ISignedDataVerifier
     private readonly ILogger<SignedDataVerifier> _logger;
     private const string AppleJwksUrl = "https://appleid.apple.com/auth/keys";
 
-    /// <summary>
-    /// Initializes the SignedDataVerifier.
-    /// </summary>
-    /// <param name="appleRootCertificates">A list of DER-encoded root certificates.</param>
-    /// <param name="enableOnlineChecks">Whether to enable revocation checking and check expiration using the current date.</param>
-    /// <param name="environment">The App Store environment to target for checks.</param>
-    /// <param name="bundleId">The app's bundle identifier.</param>
-    /// <param name="appAppleId">The app's identifier, omitted in the sandbox environment.</param>
-    /// <exception cref="ArgumentException">Thrown when appAppleId is required but not provided in production environment.</exception>
     public SignedDataVerifier(IOptions<AppStoreServerAPIClientOptions> options, ILogger<SignedDataVerifier> logger)
     {
         _options = options.Value;
