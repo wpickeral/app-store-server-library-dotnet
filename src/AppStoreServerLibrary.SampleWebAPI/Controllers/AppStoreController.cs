@@ -1,20 +1,6 @@
 using AppStoreServerLibrary.Models;
-using Jose;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Text.Json;
-using static System.Formats.Asn1.AsnWriter;
-using System.Transactions;
-using System.Security;
-using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace AppStoreServerLibrary.WebAPI.Controllers;
 
@@ -89,7 +75,4 @@ public class AppStoreController : ControllerBase
             return StatusCode(500, "Internal Server Error");
         }
     }
-
-
- 
 }

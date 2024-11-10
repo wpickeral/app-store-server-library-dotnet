@@ -1,9 +1,8 @@
-﻿using System.Net.Http.Headers;
+﻿using AppStoreServerLibrary.Models;
+using Microsoft.Extensions.Options;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
-using AppStoreServerLibrary.Models;
-using Microsoft.Extensions.Options;
 
 namespace AppStoreServerLibrary;
 
