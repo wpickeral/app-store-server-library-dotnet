@@ -80,7 +80,7 @@ public class AppStoreController : ControllerBase
             var signedPayload = checkTestNotificationResponse.SignedPayload ?? throw new Exception("signedPayload not provided in the request");
             var decodedPayload =  _signedDataVerifier.ValidateAndDecodeNotificationV2(checkTestNotificationResponse.SignedPayload);
 
-            _logger.LogInformation("Processing notfication type {NotificationType}", decodedPayload?.SignedData?.NotificationType);
+            _logger.LogInformation("Processing notification type {NotificationType}", decodedPayload?.SignedData?.NotificationType);
             return Ok();
         }
         catch (Exception ex)
