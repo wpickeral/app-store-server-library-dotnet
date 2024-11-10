@@ -73,7 +73,7 @@ public class AppStoreController : ControllerBase
 
     [HttpPost]
     [Route("/notifications")]
-    public async Task<IActionResult> HandleNotification(CheckTestNotificationResponse checkTestNotificationResponse)
+    public async Task<IActionResult> NotificationsV2Webhook(CheckTestNotificationResponse checkTestNotificationResponse)
     {
         try
         {
