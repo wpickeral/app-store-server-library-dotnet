@@ -41,6 +41,6 @@ builder.Services.AddAppStoreServerLibraryClient();
 
 
 ## Sample Application
-Please checkout `AppStoreServerLibrary.SampleWebAPI` to see a sample implementation.
+Please checkout [AppStoreServerLibrary.SampleWebAPI](https://github.com/wpickeral/app-store-server-library-dotnet/tree/main/src/AppStoreServerLibrary.SampleWebAPI) to see a sample implementation.
 
 
